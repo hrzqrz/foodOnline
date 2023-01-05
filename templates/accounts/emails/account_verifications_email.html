@@ -1,0 +1,6 @@
+{% autoescape off %}
+    Hi {{user.fisrt_name}}, 
+    Please click on link below to cinfirm your registration 
+
+    http://{{domain}}{%url 'activate' uidb64=uid token=token%}
+{% endautoescape %}
