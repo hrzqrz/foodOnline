@@ -5,6 +5,7 @@ from django.utils.encoding import force_bytes
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import EmailMessage
 from django.conf import settings
+
 def detectUser(user):
     if user.role == 1:
         redirectUrl = 'vendorDashboard'
@@ -50,3 +51,4 @@ def send_notification(mail_subject, mail_template, context):
     to_email = context['user'].email
     mail = EmailMessage(mail_subject, message, from_emial, to=[to_email])
     mail.send()
+    
