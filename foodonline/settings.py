@@ -70,6 +70,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'accounts.context_processor.get_vendor',
                 'accounts.context_processor.get_user_profile',
+                'accounts.context_processor.get_zarinpal_client_id',
                 'marketplace.context_processor.get_cart_counter',
                 'marketplace.context_processor.get_cart_amounts',
             ],
@@ -158,3 +159,5 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'foodonline marketplace <hrzqrz@gmail.com>'
+
+ZARINPAL_CLIENT_ID = config('ZARINPAL_CLIENT_ID')
