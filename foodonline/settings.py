@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'customers',
     'marketplace',
     'orders',
+    'zarinpal',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -53,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'orders.request_object.RequestObjectMiddleware', # custome middleware created to access the request object in models.py
 ]
 
 ROOT_URLCONF = 'foodonline.urls'
